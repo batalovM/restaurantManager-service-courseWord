@@ -1,0 +1,16 @@
+server:
+  error:
+    include-message: always
+  port: ${HOST_PORT:9010}
+spring:
+  application:
+    name: @project.name@
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:restaurant}?ApplicationName=${spring.application.name}
+    driver-class-name: org.postgresql.Driver
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
