@@ -9,8 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @Date 09.11.2025
  */
 @Configuration
-@ConfigurationPropertiesScan(basePackages = {"ru.isands.lib.specification.template.configuration.properties",
-        "ru.batalov.configuration"})
+@ConfigurationPropertiesScan(basePackages = {"ru.batalov.configuration"})
 @ComponentScan(basePackages = "ru.batalov")
 public class RestaurantManagerConf {
 }
